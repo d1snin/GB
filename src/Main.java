@@ -59,7 +59,7 @@ public class Main {
     double d = 3.5;
     byte b = 32;
     short s = 43;
-    long l = 64;
+    long l = 64L;
     String n = "Some text here";
     char ch = 'z';
     boolean w = false;
