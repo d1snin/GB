@@ -1,13 +1,71 @@
+import javax.sound.midi.Soundbank;
+import java.util.Scanner;
+
 public class Main {
 
-    public static void main(String[] args) {
-        System.out.println(yes(4.2f, 5.4f, 4.3f, 6.7f)); //К заданию 3
-        System.out.println(yesThisIsAnotherMethod(7, 20)); //К заданию 4
-        System.out.println(anotherMethod(5)); //К заданию 5
-        System.out.println(methodYes(3)); //К заданию 6
-        methodHaha("Иван"); //К заданию 7
-        visocosOpredelator(2003);
+    public static void main(String[] args)  {
+    while(true) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Добро пожаловать!");
+        System.out.println("ведите первое число с плавающей запятой!");
+
+        float float1 = scan.nextFloat();
+
+        System.out.println("Введите второе число с плавающей запятой!");
+
+        float float2 = scan.nextFloat();
+
+        System.out.println("Введите третье число с плавающей запятой!");
+
+        float float3 = scan.nextFloat();
+
+        System.out.println("Введите четвертое число с плавающей запятой!");
+
+        float float4 = scan.nextFloat();
+
+        System.out.println("Результат: " + yes(float1, float2, float3, float4)); //К заданию 3
+
+        System.out.println("Введите первое число");
+
+        int firstNum = scan.nextInt();
+
+        System.out.println("Введите второе число");
+
+        int secondNum = scan.nextInt();
+
+        System.out.println("Результат: " + yesThisIsAnotherMethod(firstNum, secondNum));
+         //К заданию 4
+
+        System.out.println("Введите число");
+
+        int fiveNumber = scan.nextInt();
+
+        System.out.println("Результат: " + anotherMethod(fiveNumber)); //К заданию 5
+
+        System.out.println("Введите число");
+
+        int intYes = scan.nextInt();
+
+        System.out.println(methodYes(intYes)); //К заданию 6
+
+        System.out.println("Введите ваше имя для показа приветствия");
+
+        String nameYes = scan.next();
+
+        methodHaha(nameYes); //К заданию 7
+
+        System.out.println("Введите год, чтобы определить високосный он или нет");
+
+        int yearForMethod = scan.nextInt();
+
+        visocosOpredelator(yearForMethod);
+
+        System.out.println("Программа запускается заново!");
+
     }
+    }
+
 
     //idk how to name this method
     static float yes(float a, float b, float c, float d) {
