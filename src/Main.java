@@ -34,7 +34,7 @@ public class Main {
             int yearForMethod = scan.nextInt(); //здесь вводится год (целое число)
             methodOpr(yearForMethod); //результат к заданию 8
             System.out.println("Программа запускается заново!");
-        } catch (Exception e) {
+        } catch (Exception e) { //с помощью try catch мы можем словить ошибку и обработать ее, будет выведено сообщение ниже и код запустится заново.
             System.out.println("вы ввели что то не так, попробуйте еще раз.");
             }
         } //на этом месте за счет цикла while начинается выполнение метода main сначала
