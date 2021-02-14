@@ -1,58 +1,111 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class ArraysClass {
-
+    @SuppressWarnings("InfiniteLoopStatement")
     public static void main(String[] args) {
-        System.out.println("Результат к заданию 1: " + arrayReplace1and0()); //к заданию 1
-        System.out.println("Результат к заданию 2: " + fillArray()); //к заданию 2
-        System.out.println("Результат к заданию 3:");
-        ifLess6Multiple2(); //к заданию 3
-        System.out.println("Результат к заданию 4:");
-        diagonalArray1();
-        System.out.println("Результат к заданию 5:");
-        minAndMaxElements();
-        System.out.println("Результат к заданию 6:");
-        int[] arrayCheckBalance = { 6, 3, 9 };
-        System.out.println(checkBalance(arrayCheckBalance));
-        System.out.println("Результат к заданию 7:");
-        int[] shiftArray = {1, 2, 3, 4, 5,};
-        shiftArray(shiftArray, -2);
-        System.out.println(Arrays.toString(shiftArray));
+        try {
+            while (true) {
+                Scanner scan = new Scanner(System.in);
+                System.out.println("Добро пожаловать.");
+                System.out.println("Задание 1:");
+                System.out.println("Введите поочередно элементы массива (массив состоит из 5 элементов)");
+                int arrayReplace1 = scan.nextInt();
+                int arrayReplace2 = scan.nextInt();
+                int arrayReplace3 = scan.nextInt();
+                int arrayReplace4 = scan.nextInt();
+                int arrayReplace5 = scan.nextInt();
+                System.out.println("Результат к заданию 1:");
+                int[] arrayReplace = {arrayReplace1, arrayReplace2, arrayReplace3, arrayReplace4, arrayReplace5};
+                arrayReplace1and0(arrayReplace);
+                System.out.println("Задание 2:");
+                System.out.println("Введите размер массива");
+                int arrayFillSize = scan.nextInt();
+                System.out.println("Результат к заданию 2:");
+                int[] arrayForFillArray = new int[arrayFillSize];
+                fillArray(arrayForFillArray);
+                System.out.println("Задание 3:");
+                System.out.println("Введите поочередно элементы массива (массив состоит из 5 элементов)");
+                int ifLessMultiple1 = scan.nextInt();
+                int ifLessMultiple2 = scan.nextInt();
+                int ifLessMultiple3 = scan.nextInt();
+                int ifLessMultiple4 = scan.nextInt();
+                int ifLessMultiple5 = scan.nextInt();
+                System.out.println("Результат к заданию 3:");
+                int[] ifLess6Multiple2Array = {ifLessMultiple1, ifLessMultiple2, ifLessMultiple3, ifLessMultiple4, ifLessMultiple5};
+                ifLess6Multiple2(ifLess6Multiple2Array);
+                System.out.println("Задание 4:");
+                System.out.println("Введите размер двумерного массива (так как размер массива строк и столбцов должен совпадать, будет взято одно число)");
+                int diagonalArraySize = scan.nextInt();
+                System.out.println("Результат к заданию 4:");
+                diagonalArray1(diagonalArraySize);
+                System.out.println("Задание 5:");
+                System.out.println("Введите поочередно элементы массива (массив состоит из 5 элементов)");
+                int arrayMinMax1 = scan.nextInt();
+                int arrayMinMax2 = scan.nextInt();
+                int arrayMinMax3 = scan.nextInt();
+                int arrayMinMax4 = scan.nextInt();
+                int arrayMinMax5 = scan.nextInt();
+                System.out.println("Результат к заданию 5:");
+                int[] arrayMinAndMax = {arrayMinMax1, arrayMinMax2, arrayMinMax3, arrayMinMax4, arrayMinMax5};
+                minAndMaxElements(arrayMinAndMax);
+                System.out.println("Задание 4:");
+                System.out.println("Введите поочередно элементы массива (массив состоит из 5 элементов)");
+                int checkBalance1 = scan.nextInt();
+                int checkBalance2 = scan.nextInt();
+                int checkBalance3 = scan.nextInt();
+                int checkBalance4 = scan.nextInt();
+                int checkBalance5 = scan.nextInt();
+                System.out.println("Результат к заданию 6:");
+                int[] arrayCheckBalance = {checkBalance1, checkBalance2, checkBalance3, checkBalance4, checkBalance5};
+                System.out.println(checkBalance(arrayCheckBalance));
+                System.out.println("Задание 7:");
+                System.out.println("Введите поочередно элементы массива (массив состоит из 5 элементов)");
+                int shiftArray1 = scan.nextInt();
+                int shiftArray2 = scan.nextInt();
+                int shiftArray3 = scan.nextInt();
+                int shiftArray4 = scan.nextInt();
+                int shiftArray5 = scan.nextInt();
+                System.out.println("Результат к заданию 7:");
+                int[] shiftArray = {shiftArray1, shiftArray2, shiftArray3, shiftArray4, shiftArray5};
+                shiftArray(shiftArray, -2);
+                System.out.println(Arrays.toString(shiftArray));
+            }
+            } catch (Exception e) {
+            System.out.println("Что-то пошло не так, попробуйте еще раз.");
+        }
     }
 
-    public static String fillArray() {
-        int[] arrIntegers = new int[8];
+    public static void fillArray(int[] q) {
         int x = 0;
-        for (int i = 0; i < arrIntegers.length; i++) {
-            arrIntegers[i] = x;
+        for (int i = 0; i < q.length; i++) {
+            q[i] = x;
             x += 3;
         }
-        return java.util.Arrays.toString(arrIntegers);
+        System.out.println(Arrays.toString(q));
     }
 
-    public static String arrayReplace1and0() {
-        int[] arr = {1, 1, 0, 1, 1, 0, 1, 0};
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == 1) {
-                arr[i] = 0;
-            } else if (arr[i] == 0) {
-                arr[i] = 1;
+    public static void arrayReplace1and0(int[] y) {
+        for (int i = 0; i < y.length; i++) {
+            if (y[i] == 1) {
+                y[i] = 0;
+            } else if (y[i] == 0) {
+                y[i] = 1;
             }
         }
-        return java.util.Arrays.toString(arr);
+        System.out.println(Arrays.toString(y));
     }
 
-    public static void ifLess6Multiple2() {
-        int[] integersArray = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
-        for (int i : integersArray) { //idea говорит мне что можно заменить обычный цикл for на расширенный, поэтому я сделал это, не люблю варны.
+    public static void ifLess6Multiple2(int[] z) {
+        for (int i : z) { //idea говорит мне что можно заменить обычный цикл for на расширенный, поэтому я сделал это, не люблю варны.
             if (i <= 6) {
                 System.out.println(i * 2);
             }
         }
     }
 
-    public static void diagonalArray1() {
-        int[][] nullsArray = new int[5][5];
+    public static void diagonalArray1(int p) {
+        int[][] nullsArray = new int[p][p];
         for (int i = 0; i < nullsArray.length; i++) {
             for (int j = 0; j < nullsArray.length; j++) {
                 if (i == j || i + j == nullsArray.length - 1) {
@@ -67,24 +120,23 @@ public class ArraysClass {
             System.out.println();
         }
     }
-    public static void minAndMaxElements() {
-        int[] elementsInt = { 19, 16, 12, 10, 7, 9, 11 };
-        int max = elementsInt[0];
-        int min = elementsInt[0];
-        for(int i = 0; i < elementsInt.length; i++) {
-            if (elementsInt[i] > max) { /*
-                                          * На каждой итерации цикла будет
-                                          * сравниваться значение проходимого элемента со значением переменной,
-                                          * которой присвоено значение первого элемента, если он будет больше чем max то к значению
-                                          * этой переменной будет присвеоно значение этого проходимого элемента, и так
-                                          * далее, пока не будет найден максимальный элемент. Аналогичное будет происходит
-                                          * и с нахождением минимального элемента, а если же не будет кандидата на меньший или
-                                          * больший элемент по отношению к перменной min или max то она таковой и останется и будет выведено ее значение.
-                                         */
-                max = elementsInt[i];
+    public static void minAndMaxElements(int[] a) {
+        int max = a[0];
+        int min = a[0];
+        for (int j : a) {
+            if (j > max) { /*
+             * На каждой итерации цикла будет
+             * сравниваться значение проходимого элемента со значением переменной,
+             * которой присвоено значение первого элемента, если он будет больше чем max то к значению
+             * этой переменной будет присвеоно значение этого проходимого элемента, и так
+             * далее, пока не будет найден максимальный элемент. Аналогичное будет происходит
+             * и с нахождением минимального элемента, а если же не будет кандидата на меньший или
+             * больший элемент по отношению к перменной min или max то она таковой и останется и будет выведено ее значение.
+             */
+                max = j;
             }
-            if(elementsInt[i] < min) {
-                min = elementsInt[i];
+            if (j < min) {
+                min = j;
             }
         }
         System.out.println("Минимальное число: " + min + " " + "Максимальное число: " + max);
