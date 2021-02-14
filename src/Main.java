@@ -45,13 +45,8 @@ public class Main {
     }
 
     static boolean isSumBetween10and20(int a, int b) {
-        boolean bb1 = a + b > 10; //жалуется когда я использую "(a + b) > 10 && < 20" или я просто чет не понял
-        boolean bb2 = a + b < 20;
-        if (bb1 && bb2) { // если значения соответствуют параметрам выше
-            return true; //возвращает истину
-        } else { //иначе
-            return false; //возвращает ложь
-        }
+        int z = a + b;
+        return (z < 20) && (z > 10);
     }
 
     static String negativeOrPositive(int a) {
@@ -63,11 +58,7 @@ public class Main {
     }
 
     static boolean isNegativeOrPositive(int a) {
-        if (a < 0) { //если a меньше нуля
-            return true; //возвращает истину
-        } else { //иначе
-            return false; //возвращает ложь
-        }
+            return a < 0; //если а будет меньше нуля то вернет истину, иначе - ложь
     }
 
     static void helloName(String name) {
