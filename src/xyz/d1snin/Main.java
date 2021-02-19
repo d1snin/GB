@@ -1,7 +1,9 @@
+package xyz.d1snin;
+
 import java.util.Scanner; //импорт пакета, который читает пользовательский ввод
 
 public class Main {
-
+    @SuppressWarnings("InfiniteLoopStatement")
     public static void main(String[] args) {
         while (true) { //с помощью этого цикла выполнение не завершится
             try {

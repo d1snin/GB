@@ -1,3 +1,5 @@
+package xyz.d1snin;
+
 import java.util.Random;
 import java.util.Scanner;
 
