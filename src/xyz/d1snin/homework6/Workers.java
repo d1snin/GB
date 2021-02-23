@@ -8,6 +8,8 @@ public class Workers {
         workerArray[2] = new Worker("Belyaev Nikolay Alekseevich", "Architect", "anotherex@example.com", "+938971928398", 125000, 41);
         workerArray[3] = new Worker("Popov Dmitry Aleksandrovich", "QA", "pda@yahoo.com", "+8387298739", 34000, 24);
         workerArray[4] = new Worker("Ignatiev Maksim Sergeevich", "System Admin", "maks@yandex.ru", "+793892893293", 39000, 47);
+        Worker worker1 = new Worker(); //test
+        worker1.workerInfo(); // test
 
         for (int i = 0; i < workerArray.length; i++) {
             if (workerArray[i].age >= 40) {
