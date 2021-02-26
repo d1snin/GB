@@ -1,4 +1,4 @@
-package xyz.d1snin;
+package xyz.d1snin.homework1;
 
 import java.util.Scanner; //импорт пакета, который читает пользовательский ввод
 
