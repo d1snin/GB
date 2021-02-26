@@ -1,4 +1,4 @@
-package xyz.d1snin.homework6;
+package xyz.d1snin.homework5;
 
 public class Workers {
     public static void main(String[] args) {
