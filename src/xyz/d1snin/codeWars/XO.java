@@ -12,8 +12,6 @@ public class XO {
         boolean isNothing = true;
         String checkStr = str.toLowerCase();
         char[] strArray = checkStr.toCharArray();
-        String test1 = "x";
-        String test2 = "x";
 
         for (int i = 0; i < strArray.length; i++) {
             if (strArray[i] == 'x') {
