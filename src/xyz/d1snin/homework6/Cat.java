@@ -1,8 +1,10 @@
 package xyz.d1snin.homework6;
 
 public class Cat extends Animal {
+    static int catCount = 0;
     Cat(String name) {
         super(name);
+        catCount++;
     }
 
     @Override

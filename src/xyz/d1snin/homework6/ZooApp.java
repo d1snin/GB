@@ -9,7 +9,7 @@ public class ZooApp {
         Cat cat = new Cat("Барсик");
         Dog dog = new Dog("Шарик");
 
-        System.out.println("Всего животных: " + animalsCount);
+        System.out.println("Всего животных: " + animalsCount + "\nСобак: " + Dog.dogCount + "\nКошек: " + Cat.catCount);
         cat.run(180);
         //cat.run(230);
         cat.swim(10);

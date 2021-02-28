@@ -1,8 +1,10 @@
 package xyz.d1snin.homework6;
 
 public class Dog extends Animal {
+    static int dogCount = 0;
     Dog(String name) {
         super(name);
+        dogCount++;
     }
 
     @Override
