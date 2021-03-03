@@ -5,7 +5,7 @@ public abstract class Animal {
     String name;
 
     Animal(String name) {
-        xyz.d1snin.homework6.ZooApp.animalsCount++;
+        ZooApp.animalsCount++;
         this.name = name;
     }
 

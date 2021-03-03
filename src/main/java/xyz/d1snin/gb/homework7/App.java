@@ -2,11 +2,23 @@ package xyz.d1snin.gb.homework7;
 
 public class App {
     public static void main(String[] args) {
-        Kitty kitty = new Kitty("Barsik", 5);
-        Plate plate = new Plate(100);
-        plate.info();
-        kitty.eat(plate);
-        plate.info();
+//        Kitty kitty = new Kitty("Barsik", 5);
+//        Plate plate = new Plate(100);
+//        plate.info();
+//        kitty.eat(plate);
+//        plate.info();
+        Plate plate = new Plate(10);
+        plate.addFood(10);
+        System.out.println("В тарелке: " + plate.info() + " единиц");
+        Kitty[] cats = {
+                new Kitty("Vasya", 6),
+                new Kitty("Murzik", 16),
+                new Kitty("Pirat", 9)
+        };
+        for (int i = 0; i < cats.length; i++) {
+            cats[i].eat(plate);
+            cats[i].getSatiety(cats[i]);
+        }
     }
 }
 
