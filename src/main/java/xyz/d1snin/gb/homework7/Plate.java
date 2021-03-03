@@ -8,6 +8,9 @@ public class Plate {
     public void decreaseFood(int n) {
         food -= n;
     }
+    public void addFood(int n) {
+        food += n;
+    }
     public int info() {
         return food;
     }
