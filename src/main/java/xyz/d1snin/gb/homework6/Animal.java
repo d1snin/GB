@@ -1,11 +1,11 @@
-package xyz.d1snin.homework6;
+package xyz.d1snin.gb.homework6;
 
 public abstract class Animal {
 
     String name;
 
     Animal(String name) {
-        ZooApp.animalsCount++;
+        xyz.d1snin.homework6.ZooApp.animalsCount++;
         this.name = name;
     }
 

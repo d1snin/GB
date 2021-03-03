@@ -1,4 +1,4 @@
-package xyz.d1snin.homework4;
+package xyz.d1snin.gb.homework4;
 
 import java.util.Random;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package xyz.d1snin.codeWars;
+package xyz.d1snin.gb.codeWars;
 
 public class XO {
     public static void main(String[] args) {

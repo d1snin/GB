@@ -1,4 +1,4 @@
-package xyz.d1snin.homework6;
+package xyz.d1snin.gb.homework6;
 
 public class ZooApp {
 

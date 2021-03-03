@@ -1,9 +1,11 @@
-apply plugin: 'java'
+plugins {
+    id 'java'
+}
+
+group 'xyz.d1snin.gb'
+version '1.0'
 
 repositories {
-    jcenter()
 }
-
 dependencies {
 }
-
