@@ -11,5 +11,5 @@ public abstract class Animal {
 
     public abstract void swim(int stopPoint);
 
-    public abstract void run(int stopPoint);
+    public abstract void run(int stopPoint, int limit);
 }

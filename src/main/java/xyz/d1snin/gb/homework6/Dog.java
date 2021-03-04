@@ -17,8 +17,8 @@ public class Dog extends Animal {
     }
 
     @Override
-    public void run(int stopPoint) {
-        if (stopPoint >= 500) {
+    public void run(int stopPoint, int limit) {
+        if (stopPoint >= limit) {
             System.out.println("Собака " + name + " не может пробежать такого расстояния.");
         }
         else {

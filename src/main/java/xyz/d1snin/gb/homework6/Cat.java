@@ -13,8 +13,8 @@ public class Cat extends Animal {
     }
 
     @Override
-    public void run(int stopPoint) {
-        if (stopPoint >= 200) {
+    public void run(int stopPoint, int limit) {
+        if (stopPoint >= limit) { //200
             System.out.println("Кот " + name + " не может пробежать такого расстояния.");
         } else {
             System.out.println("Кот " + name + " пробежал " + stopPoint + " м!");

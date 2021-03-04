@@ -10,10 +10,10 @@ public class ZooApp {
         Dog dog = new Dog("Шарик");
 
         System.out.println("Всего животных: " + animalsCount + "\nСобак: " + Dog.dogCount + "\nКошек: " + Cat.catCount);
-        cat.run(180);
+        cat.run(180, 200);
         //cat.run(230);
         cat.swim(10);
-        dog.run(420);
+        dog.run(420, 500);
         //dog.run(560);
         dog.swim(5);
         //dog.swim(15);
