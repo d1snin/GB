@@ -1,4 +1,4 @@
-package xyz.d1snin.gb.homework7;
+package xyz.d1snin.gb.homeworks.level1.homework7;
 
 public class App {
     public static void main(String[] args) {

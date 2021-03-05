@@ -1,4 +1,4 @@
-package xyz.d1snin.gb.homework8;
+package xyz.d1snin.gb.homeworks.level1.homework8;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

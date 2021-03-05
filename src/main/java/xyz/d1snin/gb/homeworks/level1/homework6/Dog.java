@@ -1,4 +1,4 @@
-package xyz.d1snin.gb.homework6;
+package xyz.d1snin.gb.homeworks.level1.homework6;
 
 public class Dog extends Animal {
     static int dogCount = 0;

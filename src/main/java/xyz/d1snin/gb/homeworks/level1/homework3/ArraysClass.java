@@ -1,4 +1,4 @@
-package xyz.d1snin.gb.homework3;
+package xyz.d1snin.gb.homeworks.level1.homework3;
 
 import java.util.Arrays;
 import java.util.Scanner;
