@@ -2,7 +2,7 @@ package xyz.d1snin.gb.codeWars;
 
 import java.util.Random;
 
-public class findUniqKata {
+public class FindUniqueKata {
     public static void main(String[] args) {
         double[] array = { 0, 1, 1, 1, 1, 1, 1, 1 };
         System.out.println(findUniq(array));
