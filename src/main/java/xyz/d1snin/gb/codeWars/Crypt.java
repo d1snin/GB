@@ -4,7 +4,6 @@ public class Crypt {
     public static void main(String[] args) {
         System.out.println(encryptThis(""));
     }
-
     public static String encryptThis(String text) {
         String[] wordsArr = text.split(" ");
         String result = "";
