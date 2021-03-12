@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'xyz.d1snin.gb'
+group 'xyz.d1snin.code-archive'
 version '1.0'
 
 repositories {
