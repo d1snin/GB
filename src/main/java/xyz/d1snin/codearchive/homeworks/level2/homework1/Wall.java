@@ -1,6 +1,6 @@
 package xyz.d1snin.codearchive.homeworks.level2.homework1;
 
-public class Wall implements Obstruction {
+public class Wall implements Obstruction, JumpObstruction {
     public Wall(int size) {
         setSize(size);
     }
