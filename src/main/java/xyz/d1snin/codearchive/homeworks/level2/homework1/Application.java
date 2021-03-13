@@ -17,8 +17,11 @@ public class Application {
 
         for (int j = 0; j < runnableAndJumpables.length; j++) {
             for (int i = 0; i < obstructions.length; i++) {
-                runnableAndJumpables[j].run(obstructions[i]);
-                runnableAndJumpables[j].jump(obstructions[i]);
+                if (obstructions[i] instanceof RunObstruction) {
+                    runnableAndJumpables[j].run(obstructions[i]);
+                } else {
+                    runnableAndJumpables[j].jump(obstructions[i]);
+                }
             }
         }
     }
