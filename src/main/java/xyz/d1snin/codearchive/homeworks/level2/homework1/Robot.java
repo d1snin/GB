@@ -1,54 +1,22 @@
 package xyz.d1snin.codearchive.homeworks.level2.homework1;
 
-public class Robot implements RunnableAndJumpable {
-    private static int JUMP_LIMIT;
-    private static int RUN_LIMIT;
-    private static boolean ACCESS = true;
-    public Robot(int jumpLimit, int runLimit) {
-        setJumpLimit(jumpLimit);
-        setRunLimit(runLimit);
-    }
-    @Override
-    public void jump(Obstruction obs) {
-        if (ACCESS) {
-            if (obs.getSize() > getJumpLimit()) {
-                System.out.println("Робот не может прыгнуть выше, чем на " + getJumpLimit());
-                ACCESS = false;
-            } else {
-                System.out.println("Робот перепрыгнул это препятствие");
-            }
-        }
+import java.util.Random;
+
+public class Robot extends UnhumanCompetitor {
+    private static final int JUMP_LIMIT;
+    private static final int RUN_LIMIT;
+
+    static {
+        Random random = new Random();
+        JUMP_LIMIT = random.nextInt(10) + 10;
+        RUN_LIMIT = random.nextInt(500) + 501;
     }
 
-    @Override
-    public void run(Obstruction obs) {
-        if (ACCESS) {
-            if (obs.getSize() > getRunLimit()) {
-                System.out.println("Робот не может пробежать больше чем " + getRunLimit());
-                ACCESS = false;
-            } else {
-                System.out.println("Робот пробежал это препятствие");
-            }
-        }
+    public Robot(String name) {
+        super("Robot", name, RUN_LIMIT, JUMP_LIMIT);
     }
 
-    @Override
-    public void setJumpLimit(int limit) {
-        JUMP_LIMIT = limit;
-    }
-
-    @Override
-    public void setRunLimit(int limit) {
-        RUN_LIMIT = limit;
-    }
-
-    @Override
-    public int getJumpLimit() {
-        return JUMP_LIMIT;
-    }
-
-    @Override
-    public int getRunLimit() {
-        return RUN_LIMIT;
+    public Robot(String name, int maxRunDistance, int maxJumpHeight) {
+        super("Robot", name, maxRunDistance, maxJumpHeight);
     }
 }

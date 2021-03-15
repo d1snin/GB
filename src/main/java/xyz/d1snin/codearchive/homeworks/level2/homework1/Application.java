@@ -1,28 +1,35 @@
 package xyz.d1snin.codearchive.homeworks.level2.homework1;
 
+import java.util.Arrays;
+
 public class Application {
     public static void main(String[] args) {
-        RunnableAndJumpable[] runnableAndJumpables = {
-                new Robot(15, 10),
-                new Cat(12, 40),
-                new Human(10, 50)
-        };
-        Obstruction[] obstructions = {
-                new Treadmill(20),
-                new Wall(12),
-                new Wall(20),
-                new Treadmill(10),
-                new Treadmill(16)
+        Competitor[] competitors = {
+                new Robot("C-3PO"),
+                new Cat("Tom"),
+                new Human("Ivan")
         };
 
-        for (int j = 0; j < runnableAndJumpables.length; j++) {
-            for (int i = 0; i < obstructions.length; i++) {
-                if (obstructions[i] instanceof RunObstruction) {
-                    runnableAndJumpables[j].run(obstructions[i]);
-                } else {
-                    runnableAndJumpables[j].jump(obstructions[i]);
-                }
+        Obstacle[] obstacles = {
+                new Treadmill(450),
+                new Wall(10),
+                new Treadmill(550)
+        };
+
+        for (Obstacle obstacle : obstacles) {
+            for (Competitor competitor : competitors) {
+                obstacle.overcome(competitor);
             }
         }
+
+        System.out.println("=============================");
+
+        printWinners(competitors);
+    }
+
+    private static void printWinners(Competitor[] competitors) {
+        Arrays.stream(competitors)
+                .filter(Competitor::isOnDistance)
+                .forEach(Competitor::printInfo);
     }
 }
