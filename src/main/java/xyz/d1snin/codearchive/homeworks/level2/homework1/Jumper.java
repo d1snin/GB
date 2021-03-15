@@ -1,4 +1,5 @@
 package xyz.d1snin.codearchive.homeworks.level2.homework1;
 
-public interface JumpObstruction {
+public interface Jumper {
+    void jump(int height);
 }

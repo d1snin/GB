@@ -1,17 +1,14 @@
 package xyz.d1snin.codearchive.homeworks.level2.homework1;
 
-public class Treadmill implements Obstruction, RunObstruction {
-    public Treadmill(int size) {
-        setSize(size);
+public class Treadmill implements Obstacle {
+    private final int distance;
+
+    public Treadmill(int distance) {
+        this.distance = distance;
     }
-    private static int SIZE;
 
     @Override
-    public int getSize() {
-        return SIZE;
-    }
-    @Override
-    public void setSize(int length) {
-        this.SIZE = length;
+    public void overcome(Competitor competitor) {
+        competitor.run(distance);
     }
 }

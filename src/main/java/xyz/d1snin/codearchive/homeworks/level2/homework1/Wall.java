@@ -1,15 +1,14 @@
 package xyz.d1snin.codearchive.homeworks.level2.homework1;
 
-public class Wall implements Obstruction, JumpObstruction {
-    public Wall(int size) {
-        setSize(size);
-    }
-    private static int SIZE;
+public class Wall implements Obstacle {
+    private final int height;
 
-    public int getSize() {
-        return SIZE;
+    public Wall(int height) {
+        this.height = height;
     }
-    public void setSize(int size) {
-        this.SIZE = size;
+
+    @Override
+    public void overcome(Competitor competitor) {
+        competitor.jump(height);
     }
 }
