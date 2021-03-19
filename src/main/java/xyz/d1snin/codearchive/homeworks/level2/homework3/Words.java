@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Words {
     public static void main(String[] args) {
-        List<String> words = new ArrayList<>();
+        ArrayList<String> words = new ArrayList<>();
         words.add("Pie");
         words.add("Apple");
         words.add("Banana");
@@ -18,7 +18,7 @@ public class Words {
         words.add("Peach");
         System.out.println("Initial array: " + words);
         System.out.println("No duplicates: " + removeDuplicates((ArrayList<?>) words));
-        countsAll((ArrayList<String>) words);
+        countsAll(words);
     }
     private static <T> ArrayList<T> removeDuplicates(ArrayList<T> list) {
         ArrayList<T> newList = new ArrayList<>();
