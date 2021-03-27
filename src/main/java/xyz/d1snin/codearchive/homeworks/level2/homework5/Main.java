@@ -23,22 +23,18 @@ public class Main {
         System.out.println(end - start + " ms");
     }
 
-    private static void method2() {
+    private static void method2() { //способ без обратной склейки двух массивов
         float[] arr = new float[size];
         Arrays.fill(arr, 1.0f);
         long start = System.currentTimeMillis();
-        float[] arrHalf1 = new float[h];
-        System.arraycopy(arr, 0, arrHalf1, 0, h);
-        float[] arrHalf2 = new float[h];
-        System.arraycopy(arrHalf2, 0, arr, h, h);
         Thread t1  = new Thread(() -> {
-            for (int i = 0; i < arrHalf1.length; i++) {
-                arrHalf1[i] = (float)(arrHalf1[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
+            for (int i = 0; i < h; i++) {
+                arr[i] = (float)(arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
             }
         });
         Thread t2 = new Thread(() -> {
-            for (int i = 0; i < arrHalf2.length; i++) {
-                arrHalf2[i] = (float)(arrHalf2[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
+            for (int i = 0; i < h; i++) {
+                arr[i + h] = (float)(arr[i + h] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
             }
         });
         t1.start();
@@ -53,11 +49,9 @@ public class Main {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.arraycopy(arrHalf1, 0, arr, 0, h);
-        System.arraycopy(arrHalf2, 0, arr, h, h);
         long end = System.currentTimeMillis();
         System.out.println(end - start + " ms");
-        printArr(arr);
+//        printArr(arr);
     }
     private static void printArr(float [] arr) {
         for (float f : arr) {
