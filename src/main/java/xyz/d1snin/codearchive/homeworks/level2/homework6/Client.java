@@ -28,6 +28,14 @@ public class Client {
                     }
                 }catch (IOException e){
                     e.printStackTrace();
+                } finally {
+                    try {
+                        socket.close();
+                        input.close();
+                        output.close();
+                    } catch (IOException e) {
+                        e.printStackTrase();
+                    }
                 }
             }).start();
             while (true) {
@@ -37,10 +45,5 @@ public class Client {
             }
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            socket.close();
-            input.close();
-            output.close();
-        }
     }
 }
