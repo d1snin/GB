@@ -34,7 +34,7 @@ public class Client {
                         input.close();
                         output.close();
                     } catch (IOException e) {
-                        e.printStackTrase();
+                        e.printStackTrace();
                     }
                 }
             }).start();
