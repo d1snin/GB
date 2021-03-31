@@ -37,6 +37,10 @@ public class Client {
             }
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            socket.close();
+            input.close();
+            output.close();
         }
     }
 }
