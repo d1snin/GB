@@ -9,13 +9,9 @@ public class Box<T extends Fruit> {
         return fruits;
     }
 
-    public void put(Fruit fruit) {
-        if (fruits.isEmpty() || fruit.getClass().getName().equals(fruits.get(0).getClass().getName())) {
-            fruits.add(fruit);
-            System.out.println("You have successfully put the fruit in the box");
-            return;
-        }
-        System.out.println("Impossible to put another fruit in the box");
+    public void put(T fruit) {
+        fruits.add(fruit);
+        System.out.println("You have successfully put the fruit in the box");
     }
 
     public float getWeight() {
@@ -28,18 +24,14 @@ public class Box<T extends Fruit> {
     }
 
     public boolean compare(Box<?> anotherBox) {
-        return Math.abs(this.getWeight() - anotherBox.getWeight()) < 0.0001 && Math.abs(this.getWeight() - anotherBox.getWeight()) > 0.0f;
+        return Math.abs(this.getWeight() - anotherBox.getWeight()) < 0.0001;
     }
 
     public void pour(Box<T> anotherBox) {
-        if (anotherBox.getBox().isEmpty() || anotherBox.getBox().get(0).getClass().getName().equals(this.getBox().get(0).getClass().getName())) {
-            for (Fruit f : fruits) {
-                anotherBox.getBox().add(f);
-            }
-            fruits.clear();
-            return;
+        for (Fruit f : fruits) {
+            anotherBox.getBox().add(f);
         }
-        System.out.println("Impossible to put another fruit in the box");
+        fruits.clear();
     }
 
     @Override

@@ -11,14 +11,14 @@ public class Main {
         orangeBox.put(new Orange());
         orangeBox.put(new Orange());
         //должен сказать что так делать нельзя
-        orangeBox.put(new Apple());
+//!        orangeBox.put(new Apple());
         //добавляем в коробку с яблоками фрукты
         appleBox.put(new Apple());
         appleBox.put(new Apple());
         appleBox.put(new Apple());
         appleBox.put(new Apple());
         //должен сказать что так делать нельзя
-        appleBox.put(new Orange());
+//!        appleBox.put(new Orange());
         //получаем вес коробки с апельсинами
         System.out.println(orangeBox.getWeight());
         //получаем вес коробки с яблоками
